@@ -13,18 +13,10 @@ const DealsOffers = () => {
   }, []);
 
   const fetchDeals = async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      console.error("No token found. Please log in.");
-      return;
-    }
-
     try {
-      const response = await axios.get("https://ecommerce-eg35.onrender.com/api/products/advertised", {
-        headers: { Authorization: `Bearer ${token}` },
-        withCredentials: true,
-      });
-      setDeals(response.data.products || []);
+      const response = await axios.get("https://ecommerce-eg35.onrender.com/api/products/advertised");
+      console.log("Fetched Deals:", response.data);
+      setDeals(response.data.products || response.data || []);
     } catch (error) {
       console.error("Error fetching deals:", error.response?.data?.message || error.message);
     }
@@ -77,7 +69,7 @@ const DealsOffers = () => {
             >
               {deals.map((deal) => {
                 const originalPrice = deal.price || 0;
-                const discountedPrice = (originalPrice * 0.9).toFixed(2); // 10% OFF Price
+                const discountedPrice = (originalPrice * 0.9).toFixed(2);
 
                 return (
                   <Link
