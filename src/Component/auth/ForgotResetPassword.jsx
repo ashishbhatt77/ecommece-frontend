@@ -50,7 +50,7 @@ const ForgotResetPassword = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("/api/auth/reset-password", {
+      const response = await fetch("https://ecommerce-eg35.onrender.com/api/auth/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp, newPassword, confirmPassword }),
