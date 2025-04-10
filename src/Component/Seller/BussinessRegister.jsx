@@ -68,7 +68,7 @@ const SellerRegistration = () => {
     }
     setLoading(true);
     try {
-      const response = await axios.post("/api/seller/register", formData);
+      const response = await axios.post("https://ecommerce-eg35.onrender.com/api/seller/register", formData);
       alert(response.data.message);
       setStep(2);
     } catch (err) {
@@ -86,7 +86,7 @@ const SellerRegistration = () => {
     }
     setLoading(true);
     try {
-      const response = await axios.post("/api/seller/verify-otp", formData);
+      const response = await axios.post("https://ecommerce-eg35.onrender.com/api/seller/verify-otp", formData);
       alert(response.data.message);
       setStep(3);
     } catch (err) {

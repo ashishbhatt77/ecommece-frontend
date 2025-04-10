@@ -22,7 +22,7 @@ const ProductManagement = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get("/api/products/active", {
+      const response = await axios.get("https://ecommerce-eg35.onrender.com/api/products/active", {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true,
       });

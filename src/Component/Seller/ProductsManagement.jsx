@@ -93,7 +93,7 @@ const ProductsManagement = () => {
       });
 
       const token = localStorage.getItem("token");
-      await axios.post("/api/products/add", formData, {
+      await axios.post("https://ecommerce-eg35.onrender.com/api/products/add", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

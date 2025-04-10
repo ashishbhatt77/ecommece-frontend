@@ -9,7 +9,7 @@ const UserManage = () => {
 
   // Fetch users from API using axios
   useEffect(() => {
-    axios.get("http://localhost:5000/api/users")
+    axios.get("https://ecommerce-eg35.onrender.com/api/users")
       .then((response) => {
         setUsers(response.data); // Correctly accessing response data
       })

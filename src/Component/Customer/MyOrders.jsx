@@ -5,7 +5,7 @@ function MyOrders() {
     const{loginname}=useContext(ContextApi)
   
 useEffect(()=>{
-    fetch(`/api/myorders/${loginname}`)
+    fetch(`https://ecommerce-eg35.onrender.com/api/myorders/${loginname}`)
 },[])
      
     return (

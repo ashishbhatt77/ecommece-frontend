@@ -27,7 +27,7 @@ const Order = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://api.example.com/order", {
+    fetch("https://ecommerce-eg35.onrender.com/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),

@@ -9,7 +9,7 @@ const BusinessManage = ({ children }) => {
 
   // ✅ API से Business Sellers डेटा लाना
   useEffect(() => {
-    axios.get("http://localhost:5000/api/sellers")
+    axios.get("https://ecommerce-eg35.onrender.com/api/sellers")
       .then((response) => {
         setSellers(response.data);
       })
@@ -22,7 +22,7 @@ const BusinessManage = ({ children }) => {
   const toggleStatus = (id, currentStatus) => {
     const newStatus = currentStatus === "Blocked" ? "Active" : "Blocked";
 
-    axios.patch(`http://localhost:5000/api/sellers/${id}`, { status: newStatus })
+    axios.patch(`https://ecommerce-eg35.onrender.com/api/sellers/${id}`, { status: newStatus })
       .then(() => {
         setSellers(sellers.map(seller =>
           seller.id === id ? { ...seller, status: newStatus } : seller

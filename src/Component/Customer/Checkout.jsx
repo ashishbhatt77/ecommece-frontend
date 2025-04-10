@@ -24,7 +24,7 @@ const CheckoutController = () => {
     const token = getToken();
     
     try {
-      const res = await fetch("/api/cart", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/cart", {
         credentials: "include",
         headers: {
           Authorization: `Bearer ${token}`,

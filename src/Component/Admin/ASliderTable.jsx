@@ -18,7 +18,7 @@ const ASliderTable = () => {
   const fetchSliders = async () => {
     try {
       const token = localStorage.getItem("token"); // ✅ Get token from localStorage
-      const response = await fetch("/api/admin/sliders", {
+      const response = await fetch("https://ecommerce-eg35.onrender.com/api/admin/sliders", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

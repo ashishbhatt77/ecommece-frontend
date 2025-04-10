@@ -60,7 +60,7 @@ const UserCreateAccount = () => {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:5000/api/users/verify-otp", {
+      const response = await fetch("https://ecommerce-eg35.onrender.com/api/users/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: formData.email, otp: formData.otp }),

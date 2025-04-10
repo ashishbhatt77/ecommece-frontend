@@ -22,7 +22,7 @@ const ProductsManagementTable = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`${API_URL}/products/seller/products`, {
+      const response = await axios.get(`https://ecommerce-eg35.onrender.com/api/products/seller/products`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProducts(response.data.products);

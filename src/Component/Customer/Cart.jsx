@@ -44,7 +44,7 @@ const Cart = () => {
     }
 
     try {
-      const res = await fetch("/api/cart", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/cart", {
         credentials: "include",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const Cart = () => {
   const fetchRecommendedProducts = async () => {
     setLoadingRecommendations(true);
     try {
-      const res = await fetch("/api/products/active", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/products/active", {
         credentials: "include",
         headers: {
           Authorization: `Bearer ${getToken()}`,
@@ -96,7 +96,7 @@ const Cart = () => {
 
     try {
       setUpdatingItemId(productId);
-      const res = await fetch("/api/cart/update", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/cart/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -148,7 +148,7 @@ const Cart = () => {
 
     try {
       setUpdatingItemId(productId);
-      const res = await fetch("/api/cart/remove", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/cart/remove", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -179,7 +179,7 @@ const Cart = () => {
     if (!token) return alert("Please login first!");
 
     try {
-      const res = await fetch("/api/cart/add", {
+      const res = await fetch("https://ecommerce-eg35.onrender.com/api/cart/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
